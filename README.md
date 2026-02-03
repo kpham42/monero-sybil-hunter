@@ -27,7 +27,7 @@ Monero Sybil Hunter is a forensic tool built to analyze the decentralization of 
 
 ## Installation & Docker Setup
 
-Using **Docker** is recommended for portfolio reviews to ensure a consistent environment.
+I highly recommend using Docker, but this can also be deployed locally as long as you have a PostgreSQL server running.
 
 ### Option A: Docker (Recommended)
 1. **Launch Infrastructure:**
@@ -50,7 +50,7 @@ Using **Docker** is recommended for portfolio reviews to ensure a consistent env
 
 ## Usage
 
-### 1. Simulation Mode (Portfolio Demo)
+### 1. Simulation Mode
 Injects a synthetic "Sybil Attack Scenario" into the database. This creates a realistic dataset with a hidden cluster of malicious nodes to demonstrate the detection engine.
 ```bash
 python main.py --mock
@@ -58,7 +58,7 @@ python main.py --mock
 > **Scenario:** 120 Total Nodes. 30 "Attacker" nodes (25%) are injected on a specific subnet (`10.66.6.x`) with hidden locations to trigger risk alerts.
 
 ### 2. Real Network Scan
-Performs a live crawl of the public Monero network.
+Performs a crawl of select portions of the Monero network using publically available sources and APIs.
 ```bash
 python main.py --time 60
 ```
