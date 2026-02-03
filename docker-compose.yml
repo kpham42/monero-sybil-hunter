@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: monero_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}          # Pulls from .env
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}  # Pulls from .env
+      POSTGRES_DB: ${POSTGRES_DB}              # Pulls from .env
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/init_schema.sql:/docker-entrypoint-initdb.d/init_schema.sql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8081:8080"
+    environment:
+      # Adminer doesn't strictly need env vars to start, 
+      # but it's good practice to keep it clean.
+      ADMINER_DEFAULT_SERVER: db
+
+volumes:
+  postgres_data:
