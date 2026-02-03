@@ -5,7 +5,7 @@
 ---
 
 ## Overview
-Monero Sybil Hunter is a forensic tool built to analyze the decentralization of the Monero cryptocurrency network. By crawling active nodes and enriching them with ISP and geolocation metadata, it generates **Risk Assessment Reports** identifying:
+I wrote this tool to analyze the decentralization (and potential centralization) of the Monero cryptocurrency network. By crawling active nodes and enriching them with ISP and geolocation metadata, it generates **Risk Assessment Reports** identifying:
 
 * **Infrastructure Centralization**: Dependency on specific cloud providers (e.g., AWS, Hetzner) vs. residential ISPs.
 * **Geo-Political Risk**: Concentration of nodes in specific jurisdictions.
