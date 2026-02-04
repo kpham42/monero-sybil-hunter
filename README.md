@@ -60,7 +60,7 @@ python main.py --mock
 ### 2. Real Network Scan
 Performs a crawl of select portions of the Monero network using publically available sources and APIs.
 ```bash
-python main.py --time 60
+python main.py --time [time]
 ```
 
 ### 3. Report Generation Only
