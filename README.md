@@ -1,4 +1,4 @@
-# Monero Sybil Hunter: Network Forensics Tool
+# Monero Sybil Hunter
 
 **A Python-based network observability suite designed to audit the Monero P2P network, analyze infrastructure resilience, and detect Sybil attack patterns.**
 
